@@ -1,0 +1,17 @@
+/*
+* Variables
+*/
+
+:root {
+    /* Website */
+    --bg-color: #3c3c3c;
+
+    /* Menu size */
+    --menu-width: 100%;
+    --menu-height: 70px;
+
+    /* Menu colors */
+    --menu-bg-color: #303030;
+    --menu-text-color: #686868;
+    --menu-mobile-bg-color: #121212;
+}

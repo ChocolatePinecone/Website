@@ -1,0 +1,70 @@
+/*
+* General
+*/
+
+@import "variables.css";
+
+body {
+    background: var(--bg-color) url("../images/website-bg.jpg");
+}
+
+.header-menu {
+    /* Show header menu when media width > 480 */
+    visibility: visible;
+    width: var(--menu-width);
+    height: var(--menu-height);
+    margin: auto;
+    background-color: var(--menu-bg-color);
+    font-weight: 900;
+    color: var(--menu-text-color);
+}
+
+.header-menu-container {
+    display: inline-block;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: calc(20% - var(--menu-height));
+    text-align: center;
+}
+
+.header-menu a:not(:first-child) {
+    /* Calculate padding according to nr of menu items (now 2)*/
+    padding-left: calc(100% / 2);
+}
+
+.mobile-menu {
+    /* Hide mobile menu when media width > 480 */
+    visibility: hidden;
+    display: inline-block;
+    float: right;
+    width: var(--menu-height);
+    height: var(--menu-height);
+    right: 0;
+    background-color: var(--menu-mobile-bg-color);
+}
+
+.burger-container {
+    padding-top: calc((var(--menu-height) - 30px) / 2 - 5px);
+    padding-bottom: calc((var(--menu-height) - 30px) / 2);
+}
+
+.burger {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 5px auto;
+}
+
+/* Small screen specific */
+
+@media (max-width: 480px) {
+    .header-menu a:not(.mobile-menu) {
+        /* Hide header menu when media width > 480 */
+        visibility: hidden;
+    }
+
+    .mobile-menu {
+        /* Show mobile menu when media width > 480 */
+        visibility: visible;
+    }
+}

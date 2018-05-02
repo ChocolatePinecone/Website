@@ -1,0 +1,4 @@
+# Ignores uploading zertain files to git
+
+# IntelliJ
+*.iml
