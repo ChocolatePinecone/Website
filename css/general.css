@@ -24,8 +24,9 @@
 
 body {
     background: var(--bg-color) url("../images/website-bg.jpg") no-repeat;
-    font-family: "Minimal5x7", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 3em;
+    font-family: sans-serif;
+    font-size: 2em;
+    color: var(--text-color);
 }
 
 a {
@@ -49,6 +50,7 @@ a:hover {
     margin: auto;
     background-color: var(--menu-bg-color);
     color: var(--menu-primary-text-color);
+    font-family: "Minimal5x7", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .header-menu-container {
