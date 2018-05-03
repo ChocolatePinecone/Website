@@ -2,11 +2,43 @@
 * General
 */
 
+/* Imports
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @import "variables.css";
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+:root {
+    --menu-items-amount: 3;
+}
+
+@font-face {
+    font-family: "Minimal5x7";
+    src: url(../assets/Minimal5x7.ttf);
+}
+
+/* All elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 body {
     background: var(--bg-color) url("../images/website-bg.jpg");
+    font-family: "Minimal5x7", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+a {
+    color: var(--a-color);
+    transition: color var(--transition-short);
+}
+
+a:hover {
+    color: var(--a-hover-color);
+    transition: color var(--transition-short);
+}
+
+/* Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .header-menu {
     /* Show header menu when media width > 480 */
@@ -15,21 +47,63 @@ body {
     height: var(--menu-height);
     margin: auto;
     background-color: var(--menu-bg-color);
-    font-weight: 900;
-    color: var(--menu-text-color);
+    color: var(--menu-primary-text-color);
 }
 
 .header-menu-container {
-    display: inline-block;
+    list-style-type: none;
+    height: 100%;
     width: 60%;
+    margin-bottom: 0;
     margin-left: 20%;
     margin-right: calc(20% - var(--menu-height));
     text-align: center;
 }
 
-.header-menu a:not(:first-child) {
-    /* Calculate padding according to nr of menu items (now 2)*/
-    padding-left: calc(100% / 2);
+.header-menu-item {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    height: 100%;
+    width: calc(60% / (var(--menu-items-amount) - 1));
+    background-color: var(--menu-item-bg-color);
+}
+
+.header-menu-item-border {
+    height: calc(100% - var(--menu-border-width));
+    border-bottom: var(--menu-border-width) solid var(--menu-item-border-color);
+}
+
+.header-menu-item a {
+    color: var(--menu-primary-text-color);
+    text-decoration: none;
+}
+
+.header-menu-item.selected a {
+    transition: color var(--transition-short);
+    color: var(--menu-item-selected-color);
+}
+
+.header-menu-item h2 {
+    line-height: var(--menu-height);
+    margin: 0;
+}
+
+.header-menu-item-selection-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: calc(100% - var(--menu-border-width));
+    width: 0;
+    border-bottom: var(--menu-border-width) solid var(--menu-item-selected-color);
+}
+
+.header-menu-item-selection-box.selected {
+    transition: all var(--transition-short);
+    width: 100%;
+    left: 0;
 }
 
 .mobile-menu {
