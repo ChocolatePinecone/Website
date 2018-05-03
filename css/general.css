@@ -42,6 +42,17 @@ a:hover {
 /* Menu
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.logo {
+    position: absolute;
+    height: calc(var(--menu-height) * 0.9);
+    padding: calc(var(--menu-height) * 0.05) 0 calc(var(--menu-height) * 0.05) 3%;
+}
+
+.header-menu-block {
+    width: 100%;
+    height: var(--menu-height);
+}
+
 .header-menu {
     position:fixed;
     top: 0;
