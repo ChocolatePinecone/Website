@@ -4,11 +4,11 @@
 
 :root {
     /* Website */
-    --bg-color: #3c3c3c;
+    --bg-color: #151515;
     --a-color: #993800;
     --a-hover-color: #7e3500;
 
-    --transition-short: 200ms;
+    --transition-short: 300ms;
 
     /* Menu size */
     --menu-width: 100%;
@@ -17,7 +17,6 @@
 
     /* Menu colors */
     --menu-bg-color: #262626;
-    --menu-item-bg-color: #393939;
     --menu-primary-text-color: #9b9b9b;
     --menu-item-border-color: var(--menu-primary-text-color);
     --menu-item-selected-color: #ff4f00;

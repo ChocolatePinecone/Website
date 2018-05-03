@@ -23,8 +23,9 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 body {
-    background: var(--bg-color) url("../images/website-bg.jpg");
+    background: var(--bg-color) url("../images/website-bg.jpg") no-repeat;
     font-family: "Minimal5x7", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3em;
 }
 
 a {
@@ -41,8 +42,8 @@ a:hover {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .header-menu {
-    /* Show header menu when media width > 480 */
-    visibility: visible;
+    position:fixed;
+    top: 0;
     width: var(--menu-width);
     height: var(--menu-height);
     margin: auto;
@@ -51,6 +52,7 @@ a:hover {
 }
 
 .header-menu-container {
+    display: inline-block;
     list-style-type: none;
     height: 100%;
     width: 60%;
@@ -66,7 +68,6 @@ a:hover {
     display: inline-block;
     height: 100%;
     width: calc(60% / (var(--menu-items-amount) - 1));
-    background-color: var(--menu-item-bg-color);
 }
 
 .header-menu-item-border {
@@ -77,6 +78,7 @@ a:hover {
 .header-menu-item a {
     color: var(--menu-primary-text-color);
     text-decoration: none;
+    font-size: 0;
 }
 
 .header-menu-item.selected a {
@@ -107,7 +109,6 @@ a:hover {
 }
 
 .mobile-menu {
-    /* Hide mobile menu when media width > 480 */
     visibility: hidden;
     display: inline-block;
     float: right;
@@ -132,7 +133,7 @@ a:hover {
 /* Small screen specific */
 
 @media (max-width: 480px) {
-    .header-menu a:not(.mobile-menu) {
+    .header-menu a:not(.mobile-menu), .header-menu-container {
         /* Hide header menu when media width > 480 */
         visibility: hidden;
     }
