@@ -20,7 +20,7 @@
     --menu-items-amount: 3;
 
     /* Menu colors */
-    --menu-bg-color: #262626;
+    --menu-bg-color: #202020;
     --menu-primary-text-color: #ffffff;
     --menu-item-border-color: var(--menu-primary-text-color);
     --menu-item-selected-color: var(--a-color);
