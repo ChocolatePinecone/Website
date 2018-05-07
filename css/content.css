@@ -9,6 +9,7 @@
     border-radius: 20px;
     border: 2px solid var(--content-item-border-color);
     background-color: var(--content-item-bg-color);
+    margin-bottom: 40px;
 }
 
 /* Small screen specific */

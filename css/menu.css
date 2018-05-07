@@ -114,7 +114,7 @@
 /* Small screen specific */
 
 @media (max-width: 480px) {
-    .header-menu a:not(.mobile-menu), .header-menu-container {
+    .header-menu-item a, .header-menu-container {
         /* Hide header menu when media width > 480 */
         visibility: hidden;
     }
