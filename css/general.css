@@ -22,6 +22,7 @@ body {
     background: var(--bg-color) url("../images/website-bg.jpg") no-repeat;
     font-family: sans-serif;
     font-size: 1.7em;
+    font-weight: 500;
     color: var(--text-color);
 }
 
@@ -35,8 +36,23 @@ a:hover {
     transition: color var(--transition-short);
 }
 
+button {
+    color: var(--text-color);
+    transition: background-color var(--transition-short);
+}
+
+button:hover {
+    color: var(--text-color);
+    background-color: var(--button-hover-color);
+    transition: background-color var(--transition-short);
+}
+
+button:focus {
+    color: var(--text-color);
+    transition: background-color var(--transition-short);
+}
+
 footer {
-    position:fixed;
     width: 100%;
     bottom: 0;
     text-align: center;

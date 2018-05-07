@@ -6,10 +6,19 @@
 
 .content-item {
     padding: 20px 20px 20px 10px;
-    border-radius: 20px;
-    border: 2px solid var(--content-item-border-color);
-    background-color: var(--content-item-bg-color);
     margin-bottom: 40px;
+}
+
+.content-item h1, .content-item h2, .content-item h3, .content-item h4, .content-item h5, .content-item h6 {
+    font-weight: 700;
+}
+
+.color-text {
+    color: var(--menu-item-selected-color);
+}
+
+.no-margin {
+    margin: 0;
 }
 
 /* Small screen specific */

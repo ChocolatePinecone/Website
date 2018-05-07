@@ -8,6 +8,7 @@
     --text-color: #ffffff;
     --a-color: #ff4f00;
     --a-hover-color: #993800;
+    --button-hover-color: rgba(255, 79, 0, 0.3);
 
     --transition-short: 300ms;
 
@@ -20,9 +21,9 @@
 
     /* Menu colors */
     --menu-bg-color: #262626;
-    --menu-primary-text-color: #9b9b9b;
+    --menu-primary-text-color: #ffffff;
     --menu-item-border-color: var(--menu-primary-text-color);
-    --menu-item-selected-color: #ff4f00;
+    --menu-item-selected-color: var(--a-color);
     --menu-mobile-bg-color: #121212;
 
     /* Content colors */
