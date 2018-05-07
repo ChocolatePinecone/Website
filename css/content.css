@@ -1,0 +1,18 @@
+/*
+* Content
+*/
+
+@import "variables.css";
+
+.content-item {
+    padding: 20px 20px 20px 10px;
+    border-radius: 20px;
+    border: 2px solid var(--content-item-border-color);
+    background-color: var(--content-item-bg-color);
+}
+
+/* Small screen specific */
+
+@media (max-width: 480px) {
+
+}
