@@ -33,7 +33,6 @@
     border: var(--tile-border-width) solid var(--text-color);
     margin: auto;
     overflow: hidden;
-    transition: width var(--transition-medium);
 }
 
 .tile-big * {
