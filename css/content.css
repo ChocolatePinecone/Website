@@ -17,6 +17,61 @@
     color: var(--menu-item-selected-color);
 }
 
+.tile-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tile-big {
+    /* Height is automatically set in js */
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    background-color: transparent;
+    border-radius: 4px;
+    border: var(--tile-border-width) solid var(--text-color);
+    margin: auto;
+    overflow: hidden;
+    transition: width var(--transition-medium);
+}
+
+.tile-big * {
+    pointer-events: none;
+}
+
+.tile-big img {
+    display: inline-block;
+    height: 100%;
+    transition: opacity var(--transition-short);
+}
+
+.tile-big .gif {
+    opacity: 0;
+}
+
+.tile-expanded {
+    /* Width is set in js */
+    float: left;
+    overflow: visible;
+}
+
+.tile-expanded img:not(.gif) {
+    /* Width is set in js */
+    position: absolute;
+    opacity: 0;
+}
+
+.tile-expanded .gif {
+    /* Width is set in js */
+    opacity: 1;
+    transition: opacity var(--transition-short) ease-in var(--transition-short);
+}
+
+.tile-miniaturized {
+    width: auto;
+}
+
 .no-margin {
     margin: 0;
 }

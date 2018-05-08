@@ -38,6 +38,7 @@ a:hover {
 
 button {
     color: var(--text-color);
+    border: 1px solid var(--button-border-color);
     transition: background-color var(--transition-short);
 }
 

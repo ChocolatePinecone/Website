@@ -1,3 +1,7 @@
+/*
+* Menu Control
+ */
+
 // Animation functions
 
 let selectMenuItem = (item) => {
