@@ -51,7 +51,8 @@ let mobileMenuDropDown = document.getElementsByClassName('mobile-menu-dropdown')
 mobileMenuButton.addEventListener('click', toggleMobileMenu);
 
 // Select active menu item
-for(let item of menuItems) {
+for(let i = 0; i < menuItems.length; i++) {
+    let item = menuItems[i];
     let itemhref = item.getElementsByTagName('A')[0].href;
     if(itemhref === window.location.href || itemhref === window.location.href + '#') {
         selectMenuItem(item);
@@ -60,7 +61,8 @@ for(let item of menuItems) {
 }
 
 // Set all menu item hover animations
-for(let item of menuItems)  {
+for(let i = 0; i < menuItems.length; i++) {
+    let item = menuItems[i];
     item.onmouseover = () => {
         selectMenuItem(item);
     };

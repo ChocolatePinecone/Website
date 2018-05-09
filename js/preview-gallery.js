@@ -4,13 +4,15 @@
 
 // Functions
 let setSquareHeight = function() {
-    for (let item of galleryItems) {
+    for(let i = 0; i < galleryItems.length; i++) {
+        let item = galleryItems[i];
         item.style.height = getComputedStyle(item).getPropertyValue('width');
     }
 };
 
 let miniaturizeSiblings = function(skipMe) {
-    for (let item of galleryItems) {
+    for(let i = 0; i < galleryItems.length; i++) {
+        let item = galleryItems[i];
         if(item !== skipMe) {
             item.classList.add('tile-miniaturized');
         }
@@ -18,7 +20,8 @@ let miniaturizeSiblings = function(skipMe) {
 };
 
 let normalizeSiblings = function(skipMe) {
-    for (let item of galleryItems) {
+    for(let i = 0; i < galleryItems.length; i++) {
+        let item = galleryItems[i];
         if(item !== skipMe) {
             item.classList.remove('tile-miniaturized');
         }
@@ -50,7 +53,8 @@ window.onresize = setSquareHeight;
 // Configure gallery elements
 let galleryWidths = [];
 
-for (let item of galleryItems) {
+for(let i = 0; i < galleryItems.length; i++) {
+    let item = galleryItems[i];
     // Save width of gallery img
     galleryWidths.push(getComputedStyle(item).getPropertyValue('width'));
     let index = galleryWidths.length - 1;
