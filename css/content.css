@@ -4,6 +4,10 @@
 
 @import "variables.css";
 
+.content {
+    margin-top: calc(var(--menu-height) * 0.5);
+}
+
 .content-item {
     padding: 20px 20px 20px 10px;
     margin-bottom: 40px;

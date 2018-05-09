@@ -14,12 +14,13 @@
     --transition-short: 300ms;
     --transition-medium: 500ms;
 
-    /* Menu sizes */
+    /* Menu settings */
     --menu-width: 100%;
     --menu-height: 70px;
     --menu-border-width: 2px;
     --menu-container-width: 60%;
     --menu-items-amount: 3;
+    --menu-z-index: 10;
 
     /* Menu colors */
     --menu-bg-color: #202020;

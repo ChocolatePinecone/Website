@@ -47,7 +47,7 @@ setSquareHeight();
 // Chain height calculation to window resizing
 window.onresize = setSquareHeight;
 
-// Add hover resizing of gallery and save img widths
+// Configure gallery elements
 let galleryWidths = [];
 
 for (let item of galleryItems) {
