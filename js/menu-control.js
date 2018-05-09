@@ -4,21 +4,21 @@
 
 // Animation functions
 
-let selectMenuItem = (item) => {
+let selectMenuItem = function(item) {
     if(item !== activeMenuItem) {
         item.classList.add('selected');
         item.getElementsByClassName('header-menu-item-selection-box')[0].classList.add('selected');
     }
 };
 
-let unselectMenuItem = (item) => {
+let unselectMenuItem = function(item) {
     if(item !== activeMenuItem) {
         item.classList.remove('selected');
         item.getElementsByClassName('header-menu-item-selection-box')[0].classList.remove('selected');
     }
 };
 
-let toggleMobileMenu = () => {
+let toggleMobileMenu = function() {
     if(mobileMenuDropDown.classList.contains('show')) {
         // Hide dropdown
         mobileMenuDropDown.classList.remove('show');

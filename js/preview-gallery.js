@@ -3,13 +3,13 @@
  */
 
 // Functions
-let setSquareHeight = () => {
+let setSquareHeight = function() {
     for (let item of galleryItems) {
         item.style.height = getComputedStyle(item).getPropertyValue('width');
     }
 };
 
-let miniaturizeSiblings = (skipMe) => {
+let miniaturizeSiblings = function(skipMe) {
     for (let item of galleryItems) {
         if(item !== skipMe) {
             item.classList.add('tile-miniaturized');
@@ -17,7 +17,7 @@ let miniaturizeSiblings = (skipMe) => {
     }
 };
 
-let normalizeSiblings = (skipMe) => {
+let normalizeSiblings = function(skipMe) {
     for (let item of galleryItems) {
         if(item !== skipMe) {
             item.classList.remove('tile-miniaturized');
@@ -25,14 +25,14 @@ let normalizeSiblings = (skipMe) => {
     }
 };
 
-let expandGallery = (item) => {
+let expandGallery = function(item) {
     let gif = item.getElementsByClassName('gif')[0];
     miniaturizeSiblings(item);
     item.style.width = getComputedStyle(gif).getPropertyValue('width');
     item.classList.add('tile-expanded');
 };
 
-let normalizeGallery = (item, width) => {
+let normalizeGallery = function(item, width) {
     normalizeSiblings(item);
     item.classList.remove('tile-expanded');
     item.style.width = width;

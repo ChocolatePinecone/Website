@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "Minimal5x7";
-    src: url(../assets/Minimal5x7.ttf);
+    src: url(../assets/Minimal5x7.ttf) format('truetype');
 }
 
 /* All elements
