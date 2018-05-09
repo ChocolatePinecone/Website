@@ -63,19 +63,19 @@ for(let i = 0; i < galleryItems.length; i++) {
     item.style.transition = 'width var(--transition-medium)';
 
     // Add hover resizing animation
-    item.addEventListener('mouseenter', () => {
+    item.addEventListener('mouseenter', function() {
         expandGallery(item);
     });
 
-    item.addEventListener('mouseleave', () => {
+    item.addEventListener('mouseleave', function() {
         normalizeGallery(item, galleryWidths[index]);
     });
 
-    item.addEventListener('click', () => {
+    item.addEventListener('click', function() {
         normalizeGallery(item, galleryWidths[index]);
     });
 
-    item.addEventListener('touchmove', () => {
+    item.addEventListener('touchmove', function() {
         normalizeGallery(item, galleryWidths[index]);
     });
 }

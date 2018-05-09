@@ -63,10 +63,10 @@ for(let i = 0; i < menuItems.length; i++) {
 // Set all menu item hover animations
 for(let i = 0; i < menuItems.length; i++) {
     let item = menuItems[i];
-    item.onmouseover = () => {
+    item.onmouseover = function() {
         selectMenuItem(item);
     };
-    item.onmouseout = () => {
+    item.onmouseout = function() {
         unselectMenuItem(item);
     };
 }
