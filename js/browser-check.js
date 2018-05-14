@@ -2,5 +2,5 @@
 let isIE = !!document.documentMode;
 
 if(isIE === true) {
-    window.location.href = 'chocolatepinecone.github.io/Website/browser-unsupported.html';
+    window.location.href = 'browser-unsupported.html';
 }
