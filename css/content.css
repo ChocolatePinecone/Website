@@ -25,32 +25,45 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.tile-big {
+.tile {
     /* Height is automatically set in js */
     position: relative;
     display: inline-block;
-    width: 45%;
     background-color: transparent;
     border-radius: 4px;
     border: var(--tile-border-width) solid var(--text-color);
     margin: auto;
     overflow: hidden;
+    transition: padding var(--transition-medium);
 }
 
-.tile-big * {
+.tile * {
     pointer-events: none;
 }
 
-.tile-big img {
+.tile img {
     display: inline-block;
     height: 100%;
     transition: opacity var(--transition-short);
 }
+.tile img:not(.gif) {
+    height: 90%;
+    margin: 5%;
+}
 
-.tile-big .gif {
+.tile .gif {
     opacity: 0;
+}
+
+.tile.big {
+    width: 45%;
+}
+
+.tile.medium {
+    width: 30%;
 }
 
 .tile-expanded {
