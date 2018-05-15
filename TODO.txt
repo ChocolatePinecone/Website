@@ -1,3 +1,5 @@
 - Add more recent Projects
-- Add good quality gifs to Recent Projects
 - Create basic Project page
+
+NOTES:
+- Get free high quality gifs from https://ezgif.com
