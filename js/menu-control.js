@@ -4,21 +4,21 @@
 
 // Animation functions
 
-let selectMenuItem = function(item) {
+let selectMenuItem = (item) => {
     if(item !== activeMenuItem) {
         item.classList.add('selected');
         item.getElementsByClassName('header-menu-item-selection-box')[0].classList.add('selected');
     }
 };
 
-let unselectMenuItem = function(item) {
+let unselectMenuItem = (item) => {
     if(item !== activeMenuItem) {
         item.classList.remove('selected');
         item.getElementsByClassName('header-menu-item-selection-box')[0].classList.remove('selected');
     }
 };
 
-let toggleMobileMenu = function() {
+let toggleMobileMenu = () => {
     if(mobileMenuDropDown.classList.contains('show')) {
         // Hide dropdown
         mobileMenuDropDown.classList.remove('show');
@@ -63,10 +63,10 @@ for(let i = 0; i < menuItems.length; i++) {
 // Set all menu item hover animations
 for(let i = 0; i < menuItems.length; i++) {
     let item = menuItems[i];
-    item.onmouseover = function() {
+    item.onmouseover = () => {
         selectMenuItem(item);
     };
-    item.onmouseout = function() {
+    item.onmouseout = () => {
         unselectMenuItem(item);
     };
 }

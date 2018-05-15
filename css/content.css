@@ -79,6 +79,10 @@
     margin: 0;
 }
 
+.contact {
+    text-align: center;
+}
+
 /* Small screen specific */
 
 @media (max-width: 480px) {

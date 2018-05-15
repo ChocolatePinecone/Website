@@ -1,3 +1,7 @@
+/*
+* Browser Check
+ */
+
 // Internet Explorer 6-11
 let isIE = !!document.documentMode;
 

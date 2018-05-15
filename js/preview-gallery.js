@@ -3,14 +3,14 @@
  */
 
 // Functions
-let setSquareHeight = function() {
+let setSquareHeight = () => {
     for(let i = 0; i < galleryItems.length; i++) {
         let item = galleryItems[i];
         item.style.height = getComputedStyle(item).getPropertyValue('width');
     }
 };
 
-let miniaturizeSiblings = function(skipMe) {
+let miniaturizeSiblings = (skipMe) => {
     for(let i = 0; i < galleryItems.length; i++) {
         let item = galleryItems[i];
         if(item !== skipMe) {
@@ -19,7 +19,7 @@ let miniaturizeSiblings = function(skipMe) {
     }
 };
 
-let normalizeSiblings = function(skipMe) {
+let normalizeSiblings = (skipMe) => {
     for(let i = 0; i < galleryItems.length; i++) {
         let item = galleryItems[i];
         if(item !== skipMe) {
@@ -28,14 +28,14 @@ let normalizeSiblings = function(skipMe) {
     }
 };
 
-let expandGallery = function(item) {
+let expandGallery = (item) => {
     let gif = item.getElementsByClassName('gif')[0];
     miniaturizeSiblings(item);
     item.style.width = getComputedStyle(gif).getPropertyValue('width');
     item.classList.add('tile-expanded');
 };
 
-let normalizeGallery = function(item, width) {
+let normalizeGallery = (item, width) => {
     normalizeSiblings(item);
     item.classList.remove('tile-expanded');
     item.style.width = width;
@@ -63,19 +63,19 @@ for(let i = 0; i < galleryItems.length; i++) {
     item.style.transition = 'width var(--transition-medium)';
 
     // Add hover resizing animation
-    item.addEventListener('mouseenter', function() {
+    item.addEventListener('mouseenter', () => {
         expandGallery(item);
     });
 
-    item.addEventListener('mouseleave', function() {
+    item.addEventListener('mouseleave', () => {
         normalizeGallery(item, galleryWidths[index]);
     });
 
-    item.addEventListener('click', function() {
+    item.addEventListener('click', () => {
         normalizeGallery(item, galleryWidths[index]);
     });
 
-    item.addEventListener('touchmove', function() {
+    item.addEventListener('touchmove', () => {
         normalizeGallery(item, galleryWidths[index]);
     });
 }
