@@ -199,6 +199,14 @@ body.block-scrolling {
     margin-top: calc(var(--menu-height) * 0.5);
 }
 
+.mobile-menu-dropdown-content a {
+    color: var(--text-color-light);
+}
+
+.mobile-menu-dropdown-content a.selected {
+    color: var(--menu-item-selected-color);
+}
+
 .mobile-menu-dropdown-content h2 {
     margin-bottom: 0;
 }

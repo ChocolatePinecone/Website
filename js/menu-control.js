@@ -41,26 +41,37 @@ let toggleMobileMenu = () => {
     }
 };
 
+let selectMobileMenuItem = (item) => {
+    item.classList.add('selected');
+};
+
 // Find menu items
 let menuItems = document.getElementsByClassName('header-menu-item');
 let activeMenuItem = null;
 let mobileMenuButton = document.getElementsByClassName('mobile-menu')[0];
 let mobileMenuDropDown = document.getElementsByClassName('mobile-menu-dropdown')[0];
+let mobileMenuItems = document.getElementsByClassName('mobile-menu-dropdown-content')[0].getElementsByTagName('A');
 
 // Add mobile menu functionality
 mobileMenuButton.addEventListener('click', toggleMobileMenu);
 
-// Select active menu item
+// Configure menu items
+let exactMatch = null;
+let includeMatch = null;
 for(let item of menuItems) {
+    // Get item href
     let itemhref = item.getElementsByTagName('A')[0].href;
-    if(itemhref === window.location.href || itemhref === window.location.href + '#') {
-        selectMenuItem(item);
-        activeMenuItem = item;
-    }
-}
 
-// Set all menu item hover animations
-for(let item of menuItems) {
+    // Select menu item if href is exactly the same as current URL
+    if(itemhref === window.location.href) {
+        exactMatch = item;
+    }
+    // Select menu item if href is partially the same as current URL (This is the case when sub-items are selected)
+    else if(window.location.href.includes(itemhref)) {
+        includeMatch = item;
+    }
+
+    // Set menu item hover animation
     item.onmouseover = () => {
         selectMenuItem(item);
     };
@@ -68,3 +79,29 @@ for(let item of menuItems) {
         unselectMenuItem(item);
     };
 }
+
+// Visualize menu item selection
+let menuItemToSet = (exactMatch !== null) ? exactMatch : includeMatch;
+selectMenuItem(menuItemToSet);
+activeMenuItem = menuItemToSet;
+
+// Select current mobile menu item
+exactMatch = null;
+includeMatch = null;
+for(let item of mobileMenuItems) {
+    // Get item href
+    let itemhref = item.href;
+
+    // Select menu item if href is exactly the same as current URL
+    if(itemhref === window.location.href) {
+        exactMatch = item;
+    }
+    // Select menu item if href is partially the same as current URL (This is the case when sub-items are selected)
+    else if(window.location.href.includes(itemhref)) {
+        includeMatch = item;
+    }
+}
+
+// Visualize mobile menu item selection
+menuItemToSet = (exactMatch !== null) ? exactMatch : includeMatch;
+selectMobileMenuItem(menuItemToSet);
