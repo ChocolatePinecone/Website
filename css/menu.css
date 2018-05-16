@@ -205,7 +205,7 @@ body.block-scrolling {
 
 /* Small screen specific */
 
-@media (max-width: 480px) {
+@media (max-width: var(--small-media-dimension)) {
     .header-menu-item a, .header-menu-container {
         /* Hide header menu when media width > 480 */
         visibility: hidden;

@@ -11,6 +11,8 @@ html {
     --button-hover-color: rgba(255, 79, 0, 0.3);
     --button-border-color: #ffffff;
 
+    --small-media-dimension: 480px;
+
     --transition-short: 300ms;
     --transition-medium: 500ms;
 

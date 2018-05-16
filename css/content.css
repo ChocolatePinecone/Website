@@ -99,6 +99,6 @@
 
 /* Small screen specific */
 
-@media (max-width: 480px) {
+@media (max-width: var(--small-media-dimension)) {
 
 }
