@@ -5,7 +5,8 @@
 html {
     /* General */
     --bg-color: #151515;
-    --text-color: #ffffff;
+    --text-color-light: #ffffff;
+    --text-color-dark: #000000;
     --a-color: #ff4f00;
     --a-hover-color: #993800;
     --button-hover-color: rgba(255, 79, 0, 0.3);

@@ -1,5 +1,6 @@
 - Add more recent Projects
 - Create basic Project page
+- After deployment send first contact mail
 
 NOTES:
 - Get free high quality gifs from https://ezgif.com

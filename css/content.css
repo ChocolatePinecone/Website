@@ -34,7 +34,7 @@
     display: inline-block;
     background-color: transparent;
     border-radius: 4px;
-    border: var(--tile-border-width) solid var(--text-color);
+    border: var(--tile-border-width) solid var(--text-color-light);
     margin: auto;
     overflow: hidden;
     transition: padding var(--transition-medium);
