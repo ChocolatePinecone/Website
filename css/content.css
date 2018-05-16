@@ -49,7 +49,9 @@
     height: 100%;
     transition: opacity var(--transition-short);
 }
+
 .tile img:not(.gif) {
+    position: absolute;
     height: 90%;
     margin: 5%;
 }
@@ -74,7 +76,6 @@
 
 .tile-expanded img:not(.gif) {
     /* Width is set in js */
-    position: absolute;
     opacity: 0;
 }
 

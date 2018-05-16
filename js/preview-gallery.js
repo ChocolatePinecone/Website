@@ -4,15 +4,16 @@
 
 // Functions
 let setSquareHeight = () => {
-    for(let i = 0; i < galleryItems.length; i++) {
-        let item = galleryItems[i];
-        item.style.height = getComputedStyle(item).getPropertyValue('width');
+    for(let item of galleryItems) {
+        // Only make tile square if it is not horizontally expanded
+        if(item.classList.contains('tile-expanded') === false) {
+            item.style.height = getComputedStyle(item).getPropertyValue('width');
+        }
     }
 };
 
 let miniaturizeSiblings = (skipMe) => {
-    for(let i = 0; i < galleryItems.length; i++) {
-        let item = galleryItems[i];
+    for(let item of galleryItems) {
         if(item !== skipMe) {
             item.classList.add('tile-miniaturized');
         }
@@ -20,8 +21,7 @@ let miniaturizeSiblings = (skipMe) => {
 };
 
 let normalizeSiblings = (skipMe) => {
-    for(let i = 0; i < galleryItems.length; i++) {
-        let item = galleryItems[i];
+    for(let item of galleryItems) {
         if(item !== skipMe) {
             item.classList.remove('tile-miniaturized');
         }
@@ -44,19 +44,12 @@ let normalizeGallery = (item, width) => {
 // Find gallery items
 let galleryItems = document.getElementsByClassName('preview-gallery');
 
-// Make all gallery items square
-setSquareHeight();
-
-// Chain height calculation to window resizing
-window.onresize = setSquareHeight;
-
 // Configure gallery elements
 let galleryWidths = [];
 
-for(let i = 0; i < galleryItems.length; i++) {
-    let item = galleryItems[i];
-    // Save width of gallery img
-    galleryWidths.push(getComputedStyle(item).getPropertyValue('width'));
+for(let item of galleryItems) {
+    // Calculate and save percentage width of gallery img
+    galleryWidths.push('' + (Math.round(item.offsetWidth / item.parentElement.offsetWidth * 100)) + '%');
     let index = galleryWidths.length - 1;
 
     // Set transition for smooth animation
@@ -79,3 +72,9 @@ for(let i = 0; i < galleryItems.length; i++) {
         normalizeGallery(item, galleryWidths[index]);
     });
 }
+
+// Make all gallery items square
+setSquareHeight();
+
+// Chain height calculation to window resizing
+window.onresize = setSquareHeight;
