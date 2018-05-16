@@ -93,12 +93,13 @@
     margin: 0;
 }
 
-.contact {
+.contact h3 {
     text-align: center;
+    font-weight: 700;
 }
 
 /* Small screen specific */
 
-@media (max-width: var(--small-media-dimension)) {
+@media (max-width: 480px) {
 
 }
