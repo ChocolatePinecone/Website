@@ -15,7 +15,31 @@ img.feature {
 
 .game-info {
     position: absolute;
-    top: 90%;
-    padding: 20px;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 3%;
     background-color: var(--content-bg-color);
+}
+
+.promo {
+    display: inline-block;
+    width: 65%;
+}
+
+.promo img {
+    width: 100%;
+}
+
+.main-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    width: 30%;
+}
+
+main-info p {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--button-border-color);
 }
