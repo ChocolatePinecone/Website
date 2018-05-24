@@ -46,30 +46,48 @@ let galleryItems = document.getElementsByClassName('preview-gallery');
 
 // Configure gallery elements
 let galleryWidths = [];
+let galleryGifsLoaded = [];
+let galleryGifImages = [];
 
 for(let item of galleryItems) {
     // Calculate and save percentage width of gallery img
     galleryWidths.push('' + (Math.round(item.offsetWidth / item.parentElement.offsetWidth * 100)) + '%');
     let index = galleryWidths.length - 1;
 
+    // Configure gif loading registration
+    galleryGifsLoaded.push(false);
+    galleryGifImages.push(new Image());
+    galleryGifImages[index].src = item.getElementsByClassName('gif')[0].src;
+    galleryGifImages[index].onload = () => {
+        galleryGifsLoaded[index] = true;
+    };
+
     // Set transition for smooth animation
     item.style.transition = 'width var(--transition-medium)';
 
-    // Add hover resizing animation
+    // Add hover resizing animation (only works when gif is loaded)
     item.addEventListener('mouseenter', () => {
-        expandGallery(item);
+        if(galleryGifsLoaded[index] === true) {
+            expandGallery(item);
+        }
     });
 
     item.addEventListener('mouseleave', () => {
-        normalizeGallery(item, galleryWidths[index]);
+        if(galleryGifsLoaded[index] === true) {
+            normalizeGallery(item, galleryWidths[index]);
+        }
     });
 
     item.addEventListener('click', () => {
-        normalizeGallery(item, galleryWidths[index]);
+        if(galleryGifsLoaded[index] === true) {
+            normalizeGallery(item, galleryWidths[index]);
+        }
     });
 
     item.addEventListener('touchmove', () => {
-        normalizeGallery(item, galleryWidths[index]);
+        if(galleryGifsLoaded[index] === true) {
+            normalizeGallery(item, galleryWidths[index]);
+        }
     });
 }
 

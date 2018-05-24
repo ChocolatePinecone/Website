@@ -35,5 +35,6 @@ html {
     --tile-border-width: 1px;
 
     /* Content colors */
+    --content-bg-color: rgba(32, 32, 32, 0.8);
     --tile-border-color: var(--button-border-color);
 }

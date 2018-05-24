@@ -1,0 +1,21 @@
+/*
+* Game
+*/
+
+@import "variables.css";
+
+.content {
+    position: relative;
+    margin: 0;
+}
+
+img.feature {
+    width: 100%;
+}
+
+.game-info {
+    position: absolute;
+    top: 90%;
+    padding: 20px;
+    background-color: var(--content-bg-color);
+}
