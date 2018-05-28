@@ -10,36 +10,73 @@
 }
 
 img.feature {
+    position: absolute;
+    z-index: 0;
+    margin-top: -15%;
     width: 100%;
 }
 
 .game-info {
-    position: absolute;
-    width: 80%;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding: 3%;
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    margin: 15% auto 20px auto;
+    padding: 30px;
     background-color: var(--content-bg-color);
+}
+
+.game-info h4 {
+    margin-bottom: 0;
+}
+
+.top-info {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--button-border-color);
 }
 
 .promo {
     display: inline-block;
-    width: 65%;
+    width: 60%;
 }
 
 .promo img {
     width: 100%;
 }
 
-.main-info {
+.side-info {
     display: inline-block;
     vertical-align: top;
     margin-left: 2%;
-    width: 30%;
+    width: 37%;
 }
 
-main-info p {
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--button-border-color);
+.side-info img {
+    width: 100%;
+}
+
+.bottom-info {
+    margin-top: 2%;
+}
+
+.bottom-info p {
+    margin-bottom: 10px;
+}
+
+.bottom-info ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 30px 0 30px 0;
+}
+
+/* Small screen specific */
+
+@media (max-width: 480px) {
+    .promo {
+        width: 100%;
+    }
+
+    .side-info {
+        margin-left: 0;
+        width: 100%;
+    }
 }
