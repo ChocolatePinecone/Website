@@ -39,7 +39,23 @@ img.feature {
     width: 60%;
 }
 
-.promo img {
+.promo .gallery {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery .item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity var(--transition-short);
+}
+
+.gallery .item.active {
+    opacity: 1;
+}
+
+.gallery .item img {
     width: 100%;
 }
 

@@ -1,5 +1,9 @@
 /*
 * Preview gallery
+*
+* This gallery supports 1 normal image and 1 gif.
+* The normal image will be shown when mouse is outside the gallery tile.
+* When the mouse enters the gallery tile, the gallery will expand and show the animating gif.
  */
 
 // Functions
