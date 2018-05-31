@@ -25,7 +25,10 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+}
+
+.tile-container.wrap {
+    flex-wrap: wrap;
 }
 
 .tile {
@@ -38,6 +41,7 @@
     margin: auto;
     overflow: hidden;
     transition: padding var(--transition-medium);
+    margin-bottom: 30px;
 }
 
 .tile * {
