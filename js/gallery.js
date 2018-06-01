@@ -6,6 +6,16 @@
  */
 
 // Functions
+let setGalleryHeight = () => {
+    // Find highest gallery item and set gallery height\
+    let height = 0;
+    for(item of galleryItems) {
+        height = (item.querySelector('img').height > height) ? item.querySelector('img').height : height;
+    }
+    console.log('height set to: ', height);
+    gallery.style.height = '' + height + 'px';
+};
+
 let imageNr = 0;
 let fade = () => {
     window.setInterval(() => {
@@ -27,17 +37,15 @@ let fade = () => {
 let gallery = document.getElementsByClassName('gallery')[0];
 let galleryItems = gallery.getElementsByClassName('item');
 
-// Find highest gallery item and set gallery height\
-let height = 0;
-for(item of galleryItems) {
-    height = (item.querySelector('img').height > height) ? item.querySelector('img').height : height;
-}
-gallery.style.height = '' + height + 'px';
-
 // Set up first gallery item
 galleryItems[0].classList.add('active');
 
 // Start fading animation cycle
 window.onload = () => {
+    setGalleryHeight();
     fade();
+};
+
+window.onresize = () => {
+    setGalleryHeight();
 };
