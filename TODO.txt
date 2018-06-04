@@ -1,4 +1,3 @@
-- Add game name to preview gallery
 - Make custom feature graphic for all game pages (fade to black at bottom for nice transition to bg-color)
 - Add more recent Projects
 - Make every individual game page
