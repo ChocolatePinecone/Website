@@ -20,7 +20,7 @@ img.feature {
     position: relative;
     z-index: 1;
     width: 70%;
-    margin: 15% auto 20px auto;
+    margin: 10% auto 20px auto;
     padding: 30px;
     background-color: var(--content-bg-color);
 }
