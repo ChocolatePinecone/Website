@@ -113,10 +113,6 @@ img.feature {
     width: 100%;
 }
 
-.side-info img:hover {
-    opacity: var(--general-hover-opacity);
-}
-
 .bottom-info {
     margin-top: 2%;
 }

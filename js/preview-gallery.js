@@ -59,12 +59,14 @@ for(let item of galleryItems) {
     let index = galleryWidths.length - 1;
 
     // Configure gif loading registration
-    galleryGifsLoaded.push(false);
     galleryGifImages.push(new Image());
-    galleryGifImages[index].src = item.getElementsByClassName('gif')[0].src;
-    galleryGifImages[index].onload = () => {
-        galleryGifsLoaded[index] = true;
-    };
+    if(item.getElementsByClassName('gif')[0] !== undefined) {
+        galleryGifsLoaded.push(false);
+        galleryGifImages[index].src = item.getElementsByClassName('gif')[0].src;
+        galleryGifImages[index].onload = () => {
+            galleryGifsLoaded[index] = true;
+        };
+    }
 
     // Set transition for smooth animation
     item.style.transition = 'width var(--transition-medium)';
