@@ -105,6 +105,10 @@
     opacity: 0;
 }
 
+.icon {
+    image-rendering: pixelated;
+}
+
 .contact h3 {
     text-align: center;
     font-weight: 700;
