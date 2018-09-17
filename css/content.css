@@ -80,6 +80,20 @@
     width: 30%;
 }
 
+.tile .status {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-color-light);
+    text-transform: uppercase;
+    font-family: "Minimal5x7", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3em;
+    transition: opacity var(--transition-short);
+}
+
 .tile-expanded {
     /* Width is set in js */
     float: left;
@@ -119,5 +133,9 @@
 @media (max-width: 480px) {
     .tile .title {
         font-size: 0.7em;
+    }
+
+    .tile.big {
+        width: 30%;
     }
 }

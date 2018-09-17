@@ -1,6 +1,5 @@
 - Add more recent Projects
-- Make every individual game page
 - After deployment send first contact mail
 
 NOTES:
-- Get free high quality gifs from https://ezgif.com
+- Make free high quality gifs on https://ezgif.com
