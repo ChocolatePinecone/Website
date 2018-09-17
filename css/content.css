@@ -73,7 +73,8 @@
 }
 
 .tile.big {
-    width: 45%;
+    /* Tile is same size as medium on pc, but bigger on mobile */
+    width: 30%;
 }
 
 .tile.medium {
@@ -136,6 +137,6 @@
     }
 
     .tile.big {
-        width: 30%;
+        width: 45%;
     }
 }
