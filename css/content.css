@@ -132,11 +132,15 @@
 /* Small screen specific */
 
 @media (max-width: 480px) {
+    .tile.big {
+        width: 45%;
+    }
+
     .tile .title {
         font-size: 0.7em;
     }
 
-    .tile.big {
-        width: 45%;
+    .tile .status {
+        font-size: 1em;
     }
 }
