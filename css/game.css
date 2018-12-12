@@ -111,6 +111,12 @@ img.feature {
 
 .side-info img {
     width: 100%;
+    transition: opacity var(--transition-short);
+}
+
+.side-info img:hover {
+    opacity: 0.5;
+    transition: opacity var(--transition-short);
 }
 
 .bottom-info {
